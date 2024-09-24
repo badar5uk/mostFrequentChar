@@ -6,18 +6,16 @@ public class mostFrequentChar {
         Scanner userInp = new Scanner(System.in);
         System.out.println("Enter a word: ");
         String word = userInp.next();
-        Scanner charInpu = new Scanner(System.in);
-        System.out.println("Enter a character to be checked: ");
-        char ch = charInpu.next().charAt(0);
+        char[] usertoCharArray = word.toCharArray();
         int frequency = 0;
-
-        for(int i = 0; i < word.length(); i++) {
-            if(ch == word.charAt(i)) {
-                ++frequency;
+        for (int i = 0; i < word.length(); i++) {
+            for (int j = i + 1; j < word.length(); j++) {
+                if (usertoCharArray[i] == usertoCharArray[j]) {
+                    System.out.println("The most frequent character is: "+ usertoCharArray[j]);
+                    frequency++;
+                    break;
+                }
             }
         }
-
-        System.out.println("The frequency of the letter" + ch + " is = " + frequency + "\n"+"in the input: " + word);
     }
-
 }
