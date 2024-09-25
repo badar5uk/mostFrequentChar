@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class mostFrequentChar {
+public class MostFrequentChar {
 
     public static void main(String[] args) {
         Scanner userInp = new Scanner(System.in);
